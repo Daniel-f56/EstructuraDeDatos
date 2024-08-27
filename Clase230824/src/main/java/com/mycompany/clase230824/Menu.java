@@ -21,8 +21,8 @@ public class Menu {
     
     public void consultarMenu(){
         
-        for(int i=0; i<platos.length;i++){
-            JOptionPane.showMessageDialog(null, "PLatos: "+platos[i]);
+        for(int i=0; i<platos.length; i++){
+            JOptionPane.showMessageDialog(null, "Platos: "+platos[i]);
         }
         
     }
@@ -34,7 +34,7 @@ public class Menu {
         //for para recorrer la matriz
         for(int f=0; f<6; f++){
             for(int c=0;c<platos.length;c++){
-                datos[f][c]=Integer.parseInt(JOptionPane.showInputDialog(null, "Valores para el dia: "+dias[c]+" PLato: "+platos[c]));
+                datos[f][c]=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el precio para el dia: "+dias[f]+" Plato: "+platos[c]));
             }
         }
     }
