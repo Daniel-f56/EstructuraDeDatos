@@ -6,15 +6,21 @@ public class Menu {
     String platos[];
     int datos[][];
     String dias[] = new String[]{"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
+    Platos arrayObjetos[];
     
+    //De aca para abajo el profe modifico el codigo
     public void crearMenu(int cantidad){
-        
+        arrayObjetos = new Platos[cantidad];
         platos = new String[cantidad];
+        
+        Platos obj = new Platos();
         
         int i = 0;
         while(i<cantidad){
-            platos[i] = JOptionPane.showInputDialog("Diga el nombre del plato "+(i+1));
-            i++;
+            obj.setNombre(JOptionPane.showInputDialog("Diga el nombre del plato"));
+            obj.setPrecio(Integer.parseInt(JOptionPane.showInputDialog("Precio del plato")));
+            
+            arrayObjetos[i] = obj;
         }
         
     }
