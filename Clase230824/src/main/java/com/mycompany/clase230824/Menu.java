@@ -17,10 +17,11 @@ public class Menu {
         
         int i = 0;
         while(i<cantidad){
-            obj.setNombre(JOptionPane.showInputDialog("Diga el nombre del plato"));
+            obj.setNombre(JOptionPane.showInputDialog("Diga el nombre del plato "+ (i+1)));
             obj.setPrecio(Integer.parseInt(JOptionPane.showInputDialog("Precio del plato")));
             
             arrayObjetos[i] = obj;
+            i++;
         }
         
     }
@@ -28,7 +29,7 @@ public class Menu {
     public void consultarMenu(){
         
         for(int i=0; i<platos.length; i++){
-            JOptionPane.showMessageDialog(null, "Platos: "+platos[i]);
+            JOptionPane.showMessageDialog(null, "Plato: "+arrayObjetos[i].getNombre() +"Precio: "+arrayObjetos[i].getPrecio());
         }
         
     }
@@ -40,7 +41,7 @@ public class Menu {
         //for para recorrer la matriz
         for(int f=0; f<6; f++){
             for(int c=0;c<platos.length;c++){
-                datos[f][c]=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el precio para el dia: "+dias[f]+" Plato: "+platos[c]));
+                datos[f][c]=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese las ventas del dia: "+dias[f]+" Plato: "+platos[c]));
             }
         }
     }

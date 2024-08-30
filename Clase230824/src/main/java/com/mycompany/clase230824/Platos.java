@@ -3,11 +3,17 @@ package com.mycompany.clase230824;
 public class Platos {
     private int precio;
     private String nombre;
+    private int produccion;
 
     public Platos(int precio, String nombre) {
         this.precio = precio;
         this.nombre = nombre;
     }
+
+    public Platos() {
+    }
+    
+    
 
     public int getPrecio() {
         return precio;
