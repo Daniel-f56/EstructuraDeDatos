@@ -5,12 +5,21 @@ public class Platos {
     private String nombre;
     private int produccion;
 
-    public Platos(int precio, String nombre) {
+    public Platos(int precio, String nombre, int produccion) {
         this.precio = precio;
         this.nombre = nombre;
+        this.produccion = produccion;
     }
 
     public Platos() {
+    }
+
+    public int getProduccion() {
+        return produccion;
+    }
+
+    public void setProduccion(int produccion) {
+        this.produccion = produccion;
     }
     
     
