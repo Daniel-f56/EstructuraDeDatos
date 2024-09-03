@@ -13,7 +13,6 @@ public class Menu {
         arrayObjetos = new Platos[cantidad];
         
         
-        Platos obj = new Platos();
         
         int i = 0;
         while(i<cantidad){
