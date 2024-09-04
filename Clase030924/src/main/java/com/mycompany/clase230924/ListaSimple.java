@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class ListaSimple {
     Nodo inicio;
     
-    Listasimple(){
+    ListaSimple(){
         inicio=null;
     }
 
@@ -17,10 +17,11 @@ public class ListaSimple {
         nuevo.setPromedio(promedio);
         nuevo.setEnlace(null);
         
-        if(inicio = null){
+        if(inicio == null){
             JOptionPane.showMessageDialog(null, "La lista esta vacia");
             
             inicio = nuevo;
+            
         } else {
             nuevo.setEnlace(inicio);
             inicio = nuevo;
@@ -35,7 +36,7 @@ public class ListaSimple {
         } else {
             do{
                 JOptionPane.showMessageDialog(null, "Nombre: "+temporal.getNombre()+temporal.getEdad()+temporal.getPromedio());
-            }while(temporal.getEnlace()! = null);
+            } while (temporal.getEnlace()!= null); 
         }
     }
 }

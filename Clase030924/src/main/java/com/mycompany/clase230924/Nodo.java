@@ -1,18 +1,10 @@
 package com.mycompany.clase230924;
 
 public class Nodo {
-    String nombre;
-    int edad;
-    float promedio;
-
-    public Nodo(String nombre, int edad, float promedio) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.promedio = promedio;
-    }
-
-    public Nodo() {
-    }
+    private String nombre;
+    private int edad;
+    private float promedio;
+    private Nodo enlace; 
 
     public String getNombre() {
         return nombre;
@@ -37,6 +29,14 @@ public class Nodo {
     public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
-    
-    
+
+    public Nodo getEnlace() {
+        return enlace;
+    }
+
+    public void setEnlace(Nodo enlace) {
+        this.enlace = enlace;
+    }
+
+
 }
