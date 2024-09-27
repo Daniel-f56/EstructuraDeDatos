@@ -45,6 +45,7 @@ public class Doble {
         nuevo.setSiguiente(null);
         nuevo.setDato(dato);
         
+        //Esta`parte no sirve
         if(inicio!=null){
             inicio = nuevo;
             JOptionPane.showMessageDialog(null, "Lista creada");
