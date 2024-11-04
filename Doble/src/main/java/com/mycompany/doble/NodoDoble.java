@@ -1,9 +1,25 @@
 package com.mycompany.doble;
 
 public class NodoDoble {
-    private NodoDoble anterior;
-    private NodoDoble siguiente;
-    private String Dato;
+    public NodoDoble anterior;
+    public NodoDoble siguiente;
+    public String Dato;
+
+    //CFonstructor para cuando ya hay nodos
+    public NodoDoble(NodoDoble anterior, NodoDoble siguiente, String Dato) {
+        this.anterior = anterior;
+        this.siguiente = siguiente;
+        this.Dato = Dato;
+    }
+
+    //Cosntructor para cuando hay datos
+    public NodoDoble(String Dato) {
+        this(null, null, Dato);
+    }
+
+    public NodoDoble() {
+    }
+    
 
     public NodoDoble getAnterior() {
         return anterior;

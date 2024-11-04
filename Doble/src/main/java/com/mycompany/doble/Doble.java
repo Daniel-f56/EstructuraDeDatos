@@ -6,57 +6,51 @@ public class Doble {
     NodoDoble inicio;
     
     Doble(){
-        inicio  = null;
+        inicio = null;
     }
     
+    
+    public boolean estaVacia(){
+        return inicio == null;
+    }
+    
+    
     public void insertarInicio(String dato){
-        NodoDoble nuevo = new NodoDoble(); 
         
-        nuevo.setAnterior(null);
-        nuevo.setSiguiente(null);
-        nuevo.setDato(dato);
-        
-        if(inicio==null){
-            inicio=nuevo;
-        }else{
-            nuevo.setSiguiente(inicio);
-            inicio.setAnterior(nuevo);
-            inicio = nuevo;
+        NodoDoble nuevo = new NodoDoble(dato);
+        if (!estaVacia()) {
+            nuevo.siguiente = inicio;
+            inicio.anterior = nuevo;
         }
+        inicio = nuevo;
+        System.out.println("Insertado al inicio: " + dato);
     }
     
     public void imprimir(){
-        NodoDoble temporal = inicio;
-        
-        if(inicio==null){
-            JOptionPane.showMessageDialog(null, "No hay nadie en la lista");
-        } else {
-            while(temporal!=null){
-                JOptionPane.showMessageDialog(null, "Datos: "+temporal.getDato());
-                temporal = temporal.getSiguiente();
+        if (!estaVacia()) {
+            String concatenar = ""; 
+            NodoDoble auxiliar = inicio; 
+            while (auxiliar != null) {
+                concatenar = concatenar + auxiliar.Dato + ", "; 
+                System.out.println("Dato actual: " + auxiliar.Dato);
+                auxiliar = auxiliar.siguiente; 
             }
+            JOptionPane.showMessageDialog(null, concatenar); 
         }
     }
     
     public void insertarFinal(String dato){
-        NodoDoble nuevo = new NodoDoble(); 
-        
-        nuevo.setAnterior(null);
-        nuevo.setSiguiente(null);
-        nuevo.setDato(dato);
-        
-        //Esta`parte no sirve
-        if(inicio!=null){
+        NodoDoble nuevo = new NodoDoble(dato);
+        if (estaVacia()) {
             inicio = nuevo;
-            JOptionPane.showMessageDialog(null, "Lista creada");
         } else {
-            NodoDoble temporal = inicio;
-            while(temporal.getSiguiente()!=null){
-                temporal = temporal.getSiguiente();
-            }
-            temporal.setSiguiente(nuevo);
-            nuevo.setAnterior(temporal);
-            nuevo.setSiguiente(null);
+            NodoDoble auxiliar = inicio;
+        while (auxiliar.siguiente != null) {
+            auxiliar = auxiliar.siguiente;
         }
+        auxiliar.siguiente = nuevo;
+        nuevo.anterior = auxiliar;
+        }
+        System.out.println("Insertado al final: " + dato);
     }
 }
