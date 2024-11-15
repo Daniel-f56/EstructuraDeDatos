@@ -29,6 +29,7 @@
                   <Component id="insertarInicio" max="32767" attributes="0"/>
                   <Component id="incertarFinal" alignment="0" max="32767" attributes="0"/>
                   <Component id="imprimir" alignment="0" max="32767" attributes="0"/>
+                  <Component id="esVacia" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="153" max="32767" attributes="0"/>
           </Group>
@@ -43,7 +44,9 @@
               <Component id="incertarFinal" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="imprimir" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="115" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="esVacia" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="80" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,6 +74,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="incertarFinalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="esVacia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Esta vacia?"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="esVaciaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -45,9 +45,9 @@ public class Doble {
             inicio = nuevo;
         } else {
             NodoDoble auxiliar = inicio;
-        while (auxiliar.siguiente != null) {
-            auxiliar = auxiliar.siguiente;
-        }
+            while (auxiliar.siguiente != null) {
+                auxiliar = auxiliar.siguiente;
+            }
         auxiliar.siguiente = nuevo;
         nuevo.anterior = auxiliar;
         }

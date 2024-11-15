@@ -34,6 +34,7 @@ public class Menus extends javax.swing.JFrame {
         insertarInicio = new javax.swing.JButton();
         imprimir = new javax.swing.JButton();
         incertarFinal = new javax.swing.JButton();
+        esVacia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,13 @@ public class Menus extends javax.swing.JFrame {
             }
         });
 
+        esVacia.setText("Esta vacia?");
+        esVacia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                esVaciaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,7 +75,8 @@ public class Menus extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(insertarInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(incertarFinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imprimir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(imprimir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(esVacia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -79,7 +88,9 @@ public class Menus extends javax.swing.JFrame {
                 .addComponent(incertarFinal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(imprimir)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(esVacia)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -99,6 +110,16 @@ public class Menus extends javax.swing.JFrame {
         // TODO add your handling code here:
         listaDoble.insertarFinal(JOptionPane.showInputDialog("Diga el dato"));
     }//GEN-LAST:event_incertarFinalActionPerformed
+
+    private void esVaciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esVaciaActionPerformed
+        // TODO add your handling code here:
+        boolean vacio = listaDoble.estaVacia();
+        if(vacio == true){
+            JOptionPane.showMessageDialog(null, "No hay elementos en la lista");
+        } else {
+            JOptionPane.showMessageDialog(null, "Hay elementos en la lista");
+        }
+    }//GEN-LAST:event_esVaciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,6 +157,7 @@ public class Menus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton esVacia;
     private javax.swing.JButton imprimir;
     private javax.swing.JButton incertarFinal;
     private javax.swing.JButton insertarInicio;
